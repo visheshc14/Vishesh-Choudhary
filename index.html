@@ -17,6 +17,10 @@
                 --white: #ffffff;
                 --black: #000000;
             }
+            
+            .link:hover{
+                color: #db2777;
+            }
 
             body {
                 display: block;
@@ -86,18 +90,18 @@
         </div>
         <div id="content">
             <p>
-               <i>Hello, I'm Vishesh. I am an Integrated MTech. student studying the security and privacy concerns within distributed machine learning.
-               Here are some of my Links.</i> 
+               <i>Hello, I'm Vishesh. I am an Integrated MTech. student studying the security and privacy concerns within distributed machine learning.</i>
+               <p> <i>Here are some of my Links.</i> </p>
             </p>
 
             <p>
-               <a href="Vishesh.gpg">PGP Public Key</a>
+               <a href="Vishesh.gpg" >PGP Public Key</a>
             </p>
             
             <p>
             <span class="logo">
                     <a href="https://xen.onrender.com">
-                        <i class="fab fa-2x fa-rust"></i>
+                        <i class="fab fa-3x fa-rust link" ></i>
                     </a>
                 </span>
             </p>    
@@ -107,6 +111,7 @@
         </div>
     
         <script>
+            function repeat () {
             var titleText = "";
             var splitTitle = "Vishesh Choudhary".split('');
             i = 0;
@@ -115,13 +120,19 @@
                     titleText += splitTitle[i];
                     document.getElementById("video-overlay").innerText = titleText + "|";
                     i++;
-                    if (i >= splitTitle.length) {
+                    if (i >= splitTitle.length) { 
                         document.getElementById("video-overlay").innerText = titleText;
                         clearInterval(intervalId);
+                    repeat();    
                     }
                 },
-                100
-            )
+                250
+            ) 
+
+            }
+            repeat ();
+               
+
         </script>
     </body>
 </html>
